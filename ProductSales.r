@@ -5,7 +5,7 @@ library(tidyverse)
 library(dplyr)
 
 #Read csv data
-sales_data <- read.csv("E:/Shruti/Study/MBA/Sem-2/Analytics/R Programming/Data/sales_data_csv.csv")
+sales_data <- read.csv("sales_data_csv.csv")
 View(sales_data)
 
 
@@ -32,6 +32,6 @@ SKU_data <- select(sales_data, 3:23)
 SKU_data <- colSums(SKU_data)
 print(SKU_data)
 
-#Identify which two product should be stopped
+#Identified which two product should be stopped
 sort(SKU_data)[1:2]
 
